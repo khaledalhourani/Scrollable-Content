@@ -1,0 +1,32 @@
+/* $Id$ */
+a.scrollable_content_prev {
+	background: url(prev.png);
+}
+a.scrollable_content_next {
+	background-image: url(next.png);
+	clear: right;
+}
+
+/* single item */
+div .scrollable_content {
+  height: 366px;
+  width: 300px;
+}
+div .scrollable_content .items .slide {
+  background: url(bg.png) no-repeat 0 0 transparent;
+  height: 366px;
+  width: 300px;
+}
+.scrollable_content .items h3, .scrollable_content .items div.views-field-title {
+  bottom: 30px;
+  color: #000;
+  font-size: 18px;
+  padding: 5px 15px;
+  width: auto;
+  text-shadow: 1px 1px 1px #919191;
+}
+div .scrollable_content .items img {
+  height: 270px;
+  margin-top: 21px;
+  width: 277px;
+}

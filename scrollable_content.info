@@ -1,0 +1,7 @@
+;$Id$
+
+name = "Scrollable Content"
+description = "Displays your content in a scrolling layout (content slider)."
+dependencies[] = jquery_update
+core = 6.x
+package = "Sliders"

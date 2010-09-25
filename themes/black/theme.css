@@ -1,0 +1,21 @@
+/* $Id$ */
+a.scrollable_content_prev {
+	background: url(prev.png);
+}
+a.scrollable_content_next {
+	background-image: url(next.png);
+	clear: right;
+}
+
+/* single item */
+.scrollable_content .items .slide {
+	background-color: #060606;
+	color: #fff;
+}
+.scrollable_content .items a {
+  color: #fff;
+}
+.scrollable_content .items h3, .scrollable_content .items div.views-field-title {
+	background-color: #231F20;
+	color: #fff;
+}
