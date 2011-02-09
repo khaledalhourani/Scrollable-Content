@@ -1,7 +1,8 @@
-;$Id$
+;$Id: scrollable_content.info,v 1.4.2.3 2011/02/09 12:16:38 goodman Exp $
 
-name = "Scrollable Content"
-description = "Displays your content in a scrolling layout (content slider)."
-dependencies[] = jquery_update
-core = 6.x
-package = "Sliders"
+name = Scrollable Content
+description = Displays your content in a scrolling layout (content slider).
+core = 7.x
+package = Sliders
+files[] = scrollable_content.views.inc
+files[] = scrollable_content_plugin_style.inc

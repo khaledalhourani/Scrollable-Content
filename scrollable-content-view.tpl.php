@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: scrollable-content-view.tpl.php,v 1.2 2010/11/04 14:09:25 goodman Exp $
 /**
  * @file scrollable-content-view.tpl.php
  *  Display content in 'scrollable content' block using jQuery.
@@ -12,11 +12,11 @@
  */
 ?>
 
-<ul id="scrollable_content_<?php print $options['items']; ?>_navi" class="main_navi">
+<ul id="scrollable_content_<?php print $options['items']; ?>_navi" class="main_navi <?php print $classes; ?>">
 <?php
 foreach ($rows as $row) {
 ?>
-  <li>
+  <li class="<?php print $classes; ?>">
     <?php print $row; ?>
   </li>
 <?php
@@ -25,16 +25,16 @@ foreach ($rows as $row) {
 </ul>
 
 <div id="scrollable_content_wrapper_<?php print $options['items']; ?>">
-  <div class="navi"></div>
+  <div class="navi <?php print $classes; ?>"></div>
 
-  <a class="prev scrollable_content_<?php print $options['items']; ?>_prev"></a>
+  <a class="prev scrollable_content_prev <?php print $classes; ?>"></a>
 
-  <div id="scrollable_content_<?php print $options['items']; ?>" class="scrollable_content <?php print $options['vertical'] == 1 ? 'vertical' : 'horizontal'; ?>">
-    <div id="scrollable_content_thumbs_<?php print $options['items']; ?>" class="items" style="left: 0px;">
+  <div id="scrollable_content_<?php print $options['items']; ?>" class="scrollable_content <?php print $options['vertical'] == 1 ? 'vertical' : 'horizontal'; ?> <?php print $classes; ?>">
+    <div id="scrollable_content_thumbs_<?php print $options['items']; ?>" class="items" style="left: 0px; <?php print $classes; ?>">
       <?php
       foreach ($rows as $row) {
       ?>
-      <div class="slide">
+      <div class="slide <?php print $classes; ?>">
         <?php print $row; ?>
       </div>
       <?php
@@ -43,7 +43,7 @@ foreach ($rows as $row) {
     </div>
   </div>
 
-  <a class="next scrollable_content_<?php print $options['items']; ?>_next"></a>
+  <a class="next scrollable_content_next <?php print $classes; ?>"></a>
 
   <br clear="all"/>
 </div>

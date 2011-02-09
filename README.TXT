@@ -1,4 +1,4 @@
-$Id$
+$Id: README.TXT,v 1.4 2010/11/04 14:09:25 goodman Exp $
 
 Scrollable Content provides a scrolling functionality for your content. Scrollable Content gives you a nice content slider preview for your featured site's content, and provides some display options (e.g. number of sliding contents, and speed of scrolling).
 

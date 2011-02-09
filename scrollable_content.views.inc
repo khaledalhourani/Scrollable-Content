@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: scrollable_content.views.inc,v 1.3 2010/11/04 14:09:25 goodman Exp $
 
 /**
  * @file

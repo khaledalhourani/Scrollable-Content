@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: scrollable-content.tpl.php,v 1.2.2.3 2011/02/09 12:16:38 goodman Exp $
 
 /**
  * @file scrollable-content.tpl.php
@@ -13,12 +13,12 @@
  */
 ?>
 
-<ul id="scrollable_content_items_navi" class="main_navi">
+<ul id="scrollable_content_items_navi" class="main_navi <?php print $classes; ?>">
 <?php
 foreach ($slides as $slide) {
 ?>
-  <li>
-    <img title="<?php print $slide['title']; ?>" alt="<?php print $slide['title']; ?>" src="<?php print $slide['image']; ?>"/>
+  <li class="<?php print $classes; ?>">
+    <img title="<?php print $slide['title']; ?>" alt="<?php print $slide['title']; ?>" src="<?php print $slide['image']; ?>" class="<?php print $classes; ?>"/>
     <span><?php print $slide['title']; ?></span>
   </li>
 <?php
@@ -26,21 +26,21 @@ foreach ($slides as $slide) {
 ?>
 </ul>
 
-
 <div id="scrollable_content_wrapper_items">
-  <div class="navi"></div>
+  <div class="navi <?php print $classes; ?>"></div>
 
-  <a class="prev scrollable_content_prev"></a>
-
-  <div id="scrollable_content_items" class="scrollable_content <?php print $direction; ?>">
-    <div id="scrollable_content_thumbs_items" class="items" style="left: 0px;">
+  <a class="prev scrollable_content_prev <?php print $classes; ?>"></a>
+  <div id="scrollable_content_items" class="scrollable_content <?php print $direction; ?> <?php print $classes; ?>">
+    <div id="scrollable_content_thumbs_items" class="items <?php print $classes; ?>" style="left: 0px;">
       <?php
       foreach ($slides as $slide) {
       ?>
-      <div class="slide">
-        <a href="<?php print $slide['path']; ?>" title="<?php print $slide['path']; ?>">
-          <img title="<?php print $slide['title']; ?>" alt="<?php print $slide['title']; ?>" src="<?php print $slide['image']; ?>"/>
-          <h3><?php print $slide['title']; ?></h3>
+      <div class="slide <?php print $classes; ?>">
+        <a href="<?php print $slide['path']; ?>" title="<?php print $slide['path']; ?>" class="<?php print $classes; ?>">
+	  <?php if (!empty($slide['image'])): ?>
+	    <img title="<?php print $slide['title']; ?>" alt="<?php print $slide['title']; ?>" src="<?php print $slide['image']; ?>" class="<?php print $classes; ?>"/>
+	  <?php	endif; ?>
+          <h3 class="<?php print $classes; ?>"><?php print $slide['title']; ?></h3>
         </a>
       </div>
       <?php
@@ -49,7 +49,7 @@ foreach ($slides as $slide) {
     </div>
   </div>
 
-  <a class="next scrollable_content_next"></a>
+  <a class="next scrollable_content_next <?php print $classes; ?>"></a>
 
   <br clear="all"/>
 </div>
